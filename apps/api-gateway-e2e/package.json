@@ -1,0 +1,26 @@
+{
+  "name": "@grocer-e/api-gateway-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@grocer-e/api-gateway"
+    ],
+    "targets": {
+      "e2e": {
+        "executor": "@nx/jest:jest",
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "dependsOn": [
+          "@grocer-e/api-gateway:build",
+          "@grocer-e/api-gateway:serve"
+        ],
+        "options": {
+          "jestConfig": "apps/api-gateway-e2e/jest.config.cts",
+          "passWithNoTests": true
+        }
+      }
+    }
+  }
+}
