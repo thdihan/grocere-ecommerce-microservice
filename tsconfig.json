@@ -8,6 +8,15 @@
     },
     {
       "path": "./apps/api-gateway"
+    },
+    {
+      "path": "./apps/auth-service"
+    },
+    {
+      "path": "./libs/global-error-handler"
+    },
+    {
+      "path": "./libs/shared/utils"
     }
   ]
 }

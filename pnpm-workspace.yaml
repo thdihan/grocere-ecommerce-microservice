@@ -1,6 +1,7 @@
 packages:
-  - "apps/*"
-
+  - 'apps/*'
+  - 'libs/*'
+  - 'libs/shared/*'
 autoInstallPeers: true
 onlyBuiltDependencies:
-  - nx
+  - 'nx'

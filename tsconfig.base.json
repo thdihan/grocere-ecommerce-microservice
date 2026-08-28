@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "ignoreDeprecations": "5.0", // Added this to ignore baseUrl deprecation.
     "composite": true,
     "declarationMap": true,
     "emitDeclarationOnly": true,
@@ -16,6 +17,14 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["@grocer-e/source"]
+    "customConditions": ["@grocer-e/source"],
+
+    // Added relative paths.
+    "paths": {
+      "@grocer-e/global-error-handler": [
+        "./libs/global-error-handler/src/index.ts"
+      ],
+      "@grocer-e/shared-utils": ["./libs/shared/utils/src/index.ts"]
+    }
   }
 }
