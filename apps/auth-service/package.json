@@ -57,6 +57,12 @@
             "buildTarget": "@grocer-e/auth-service:build:production"
           }
         }
+      },
+      "swagger": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "pnpm exec ts-node -P apps/auth-service/tsconfig.app.json apps/auth-service/src/swagger.ts"
+        }
       }
     }
   },

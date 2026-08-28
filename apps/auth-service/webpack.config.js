@@ -10,7 +10,13 @@ module.exports = {
       devtoolModuleFilenameTemplate: '[absolute-resource-path]',
     }),
   },
+  externals: ['swagger-ui-express', 'express'],
   resolve: {
+    modules: [
+      resolve(__dirname, 'node_modules'),
+      resolve(__dirname, '../../node_modules'),
+      'node_modules',
+    ],
     plugins: [
       new TsconfigPathsPlugin({
         configFile: resolve(__dirname, '../../tsconfig.base.json'),
